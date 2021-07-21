@@ -1,0 +1,16 @@
+.table label{
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+.table p{
+	text-align: center;
+}
+
+.table .matkul{
+	text-align: left !important;
+}
+
+.table .dosen{
+	text-align: left !important;
+}

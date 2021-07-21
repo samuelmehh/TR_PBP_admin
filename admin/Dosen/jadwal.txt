@@ -1,0 +1,63 @@
+<?php 
+require_once "fungsi.php";
+require_once "header.php";
+$nim = $_SESSION['user'];
+$data = select_kst($nim)[0];
+?>
+
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-4">KST Page</h1>
+        </div>
+
+    <div class="container">
+	    <div class="table-responsive">
+		    <table class="table">
+			    <tr>
+				    <td class="text-center">Kode</td>
+				    <td class="text-center">Matakuliah</td>
+				    <td class="text-center">B/U</td>
+				    <td class="text-center">SKS A</td>
+				    <td class="text-center">SKS B</td>
+				    <td class="text-center">Keterangan</td>
+				
+			    </tr>
+                <tr>
+        <td>
+            <label></label>
+            <p><?= $data['kode']?></p>
+        </td>
+        <td>
+            <label></label>
+            <p><?= $data['matakuliah']?></p>
+        </td>
+        <td>
+            <label></label>
+            <p><?= $data['b/u']?></p>
+        </td>
+        <td>
+            <label></label>
+            <p><?= $data['sksa'] ?></p>
+        </td>
+        <td>
+            <label></label>
+            <p><?= $data['sksb'] ?></p>
+        </td>
+        <td>
+            <label></label>
+            <p ><?= $data['keterangan'] ?></p>
+        </td>
+    </tr>
+			
+			    <tr>
+				    <td colspan="4" class="text-left">Total</td>
+				    <td class="text-center"><strong>19</strong></td>
+				    <td class="text-center"><strong>21</strong></td>
+				    <td colspan="2"></td>
+			    </tr>
+
+		    </table>
+	    </div>
+    </div>
+
+
+<?php require_once "footer.php"; ?>
